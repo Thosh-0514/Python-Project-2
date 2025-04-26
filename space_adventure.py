@@ -5,7 +5,10 @@ import os
 
 # Initialize pygame
 pygame.init()
-
+if keystate[pygame.K_LEFT]:
+    self.speed_x = -8
+if keystate[pygame.K_RIGHT]:
+    self.speed_x = 8
 # Screen dimensions
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
