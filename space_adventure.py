@@ -82,9 +82,9 @@ class Player(pygame.sprite.Sprite):
         self.speed_x = 0
         keystate = pygame.key.get_pressed()
         if keystate[pygame.K_LEFT]:
-            self.speed_x = 8
-        if keystate[pygame.K_RIGHT]:
             self.speed_x = -8
+        if keystate[pygame.K_RIGHT]:
+            self.speed_x = 8
 
         self.rect.x += self.speed_x
         if self.rect.right > SCREEN_WIDTH + 20:
@@ -145,7 +145,7 @@ class Bullet(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.centerx = x
         self.rect.bottom = y
-        self.speedy = 1
+        self.speedy = 10
 
     def update(self):
         self.rect.y += self.speedy
